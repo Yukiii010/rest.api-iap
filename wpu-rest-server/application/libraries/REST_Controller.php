@@ -398,6 +398,8 @@ abstract class REST_Controller extends CI_Controller {
 
         $this->preflight_checks();
 
+        $this->load->config($config);
+
         // Set the default value of global xss filtering. Same approach as CodeIgniter 3
         $this->_enable_xss = ($this->config->item('global_xss_filtering') === TRUE);
 
