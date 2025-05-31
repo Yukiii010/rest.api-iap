@@ -16,6 +16,7 @@ class Mahasiswa extends CI_Controller
         if( $this->input->post('keyword') ) {
             $data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
         }
+         
         $this->load->view('templates/header', $data);
         $this->load->view('mahasiswa/index', $data);
         $this->load->view('templates/footer');
@@ -26,7 +27,7 @@ class Mahasiswa extends CI_Controller
         $data['judul'] = 'Form Tambah Data Mahasiswa';
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('nrp', 'NRP', 'required|numeric');
+        $this->form_validation->set_rules('nim', 'NIM', 'required|numeric');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
         if ($this->form_validation->run() == false) {
@@ -60,10 +61,10 @@ class Mahasiswa extends CI_Controller
     {
         $data['judul'] = 'Form Ubah Data Mahasiswa';
         $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
-        $data['jurusan'] = ['Teknik Informatika', 'Teknik Mesin', 'Teknik Planologi', 'Teknik Pangan', 'Teknik Lingkungan'];
+        $data['jurusan'] = ['Teknik Informatika', 'Teknik Mesin', 'Teknik Planologi', 'Teknik Pangan', 'Teknik Lingkungan', 'Matematika', 'Sistem Informasi'];
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('nrp', 'NRP', 'required|numeric');
+        $this->form_validation->set_rules('nim', 'NIM', 'required|numeric');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
         if ($this->form_validation->run() == false) {

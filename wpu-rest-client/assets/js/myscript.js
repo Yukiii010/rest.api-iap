@@ -6,6 +6,8 @@ if (flashData) {
         text: 'Berhasil ' + flashData,
         type: 'success'
     });
+
+    $('.flash-data').attr('data-flashdata', '');
 }
 
 // tombol-hapus

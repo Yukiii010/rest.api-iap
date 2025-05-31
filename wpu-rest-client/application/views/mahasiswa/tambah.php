@@ -15,9 +15,9 @@
                             <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="nrp">NRP</label>
-                            <input type="text" name="nrp" class="form-control" id="nrp">
-                            <small class="form-text text-danger"><?= form_error('nrp'); ?></small>
+                            <label for="nrp">NIM</label>
+                            <input type="text" name="nim" class="form-control" id="nim">
+                            <small class="form-text text-danger"><?= form_error('nim'); ?></small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -33,6 +33,8 @@
                                 <option value="Teknik Mesin">Teknik Mesin</option>
                                 <option value="Teknik Planologi">Teknik Planologi</option>
                                 <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                                <option value="Matematika">Matematik</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
                             </select>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>

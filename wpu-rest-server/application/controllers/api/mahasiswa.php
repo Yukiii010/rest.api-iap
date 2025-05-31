@@ -16,7 +16,7 @@ class Mahasiswa extends REST_Controller {
         parent::__construct();
         $this->load->model('Mahasiswa_model');
 
-        $this->methods['index_get']['limit'] = 5;
+        $this->methods['index_get']['limit'] = 100;
     }
 
     public function index_get()
@@ -56,7 +56,7 @@ class Mahasiswa extends REST_Controller {
                 'status' => true,
                 'message' => 'deleted',
                 'id' => $id
-            ], REST_Controller::HTTP_NO_CONTENT);
+            ], REST_Controller::HTTP_ACCEPTED);
         } else {
             $this->response([
                 'status' => false,
@@ -103,7 +103,7 @@ public function index_put () {
             $this->response([
                 'status' => true,
                 'message' => 'updated',
-            ], REST_Controller::HTTP_NO_CONTENT);
+            ], REST_Controller::HTTP_OK);
     } else {
           $this->response([
                 'status' => false,
